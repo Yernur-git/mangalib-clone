@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@example.com",
+      "passwordHash": "$2a$10$abcd...",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "moderator1",
+      "email": "moder1@example.com",
+      "passwordHash": "$2a$10$efgh...",
+      "role": "moderator"
+    },
+    {
+      "id": 3,
+      "username": "user1",
+      "email": "user1@example.com",
+      "passwordHash": "$2a$10$ijkl...",
+      "role": "user"
+    }
+  ],
+
+  "manga": [
+    {
+      "id": 1,
+      "title": "Naruto",
+      "author": "Masashi Kishimoto",
+      "genres": ["Action", "Adventure"],
+      "coverImage": "/images/naruto.jpg",
+      "uploaderId": 3
+    },
+    {
+      "id": 2,
+      "title": "One Piece",
+      "author": "Eiichiro Oda",
+      "genres": ["Action", "Fantasy"],
+      "coverImage": "/images/onepiece.jpg",
+      "uploaderId": 3
+    }
+  ],
+
+  "requests": [
+    {
+      "id": 1,
+      "userId": 3,
+      "mangaTitle": "Bleach",
+      "status": "pending",
+      "createdAt": "2025-04-05T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "mangaTitle": "Attack on Titan",
+      "status": "approved",
+      "createdAt": "2025-04-04T15:30:00Z"
+    }
+  ]
+}
