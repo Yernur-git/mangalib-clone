@@ -61,8 +61,16 @@ const ManageUsersPage = () => {
                             <td data-label="Email">{u.email}</td>
                             <td data-label="Role">
                                 {user?.id !== u.id ? (
-                                    <select className="role-select dark-select">
-                                        {/* options */}
+                                    <select
+                                        value={u.role}
+                                        onChange={(e) => updateUserRole(u.id, e.target.value)}
+                                        className="role-select dark-select"
+                                    >
+                                        <option value="reader">Reader</option>
+                                        <option value="editor">Editor</option>
+                                        <option value="contentManager">Content Manager</option>
+                                        <option value="moderator">Moderator</option>
+                                        <option value="admin">Admin</option>
                                     </select>
                                 ) : (
                                     <span className="current-role">{u.role}</span>
