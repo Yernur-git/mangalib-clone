@@ -1,28 +1,26 @@
 import React, { useState } from 'react';
+import '../../styles/Comments.css';
 
-const CommentForm = ({ onSubmit }) => {
-    const [comment, setComment] = useState('');
+const CommentForm = ({ onCommentSubmit }) => {
+    const [commentText, setCommentText] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (comment.trim()) {
-            onSubmit(comment);
-            setComment('');
+        if (commentText.trim()) {
+            onCommentSubmit(commentText);
+            setCommentText('');
         }
     };
 
     return (
         <form onSubmit={handleSubmit} className="comment-form">
       <textarea
-          className="comment-textarea"
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
+          value={commentText}
+          onChange={(e) => setCommentText(e.target.value)}
           placeholder="Write your comment..."
           required
       />
-            <button type="submit" className="comment-submit-btn">
-                Post Comment
-            </button>
+            <button type="submit">Post Comment</button>
         </form>
     );
 };

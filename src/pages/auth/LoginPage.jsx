@@ -26,8 +26,6 @@ const LoginPage = () => {
         }
     };
 
-
-
     return (
         <div className="auth-page-container">
             <div className="formContainer">

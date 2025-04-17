@@ -6,6 +6,7 @@ import {addComment, fetchComments, setComments} from "../../features/comments/co
 import CommentForm from '../../components/common/CommentForm';
 import CommentList from '../../components/common/CommentList';
 import '../../styles/manga-detail.css';
+import '../../styles/Comments.css';
 
 const MangaDetailPage = () => {
     const { id } = useParams();
