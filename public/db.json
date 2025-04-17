@@ -22,14 +22,14 @@
       "role": "reader"
     },
     {
-      "id": 4,
+      "id": "4",
       "username": "contentManager1",
       "email": "cm@example.com",
       "password": "$2b$10$ZmPUwTLiBGJEJkXTdshp5uRyw6is57Ei3fMo2EjfQHXS0jiNkQFDu",
       "role": "contentManager"
     },
     {
-      "id": 5,
+      "id": "5",
       "username": "editor1",
       "email": "editor@example.com",
       "password": "$2b$10$SINmGyMqaD3QLh0KaN5B.OpA/KOFnb/SHyapT.s6Gt/7PD.YxWXqO",
@@ -120,16 +120,9 @@
     {
       "id": "1",
       "userId": 3,
-      "mangaTitle": "Bleach",
+      "mangaTitle": "New Manga",
       "status": "pending",
-      "createdAt": "2025-04-05T12:00:00Z"
-    },
-    {
-      "id": "2",
-      "userId": 3,
-      "mangaTitle": "Attack on Titan",
-      "status": "approved",
-      "createdAt": "2025-04-04T15:30:00Z"
+      "createdAt": "2023-05-20"
     }
   ],
   "comments": [
@@ -164,5 +157,14 @@
       ]
     }
   ],
-  "chapters": []
+  "chapters": [
+    {
+      "id": "1",
+      "mangaId": 1,
+      "number": 1,
+      "uploaderId": 2,
+      "fileUrl": "/uploads/chapter1.zip",
+      "createdAt": "2023-05-18T14:30:00Z"
+    }
+  ]
 }

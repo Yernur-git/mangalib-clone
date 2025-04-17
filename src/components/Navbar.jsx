@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import React, {useEffect, useState} from 'react';
+import {Link, useNavigate} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
 import { logout } from '../features/auth/authSlice';
 import '../styles/Navbar.css';
 
@@ -9,7 +9,6 @@ const Navbar = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [allMangas, setAllMangas] = useState([]);
     const navigate = useNavigate();
-
     const { isAuthenticated, user } = useSelector((state) => state.auth);
     const dispatch = useDispatch();
 
@@ -89,27 +88,30 @@ const Navbar = () => {
                         <>
                             <Link to="/favorites" className="navbar-link">Favorites</Link>
 
-                            {isAdmin && (
+                            {/* Admin/Moderator Links */}
+                            {['admin', 'moderator'].includes(user?.role) && (
                                 <>
-                                    <Link to="/manage-users" className="navbar-link">Manage Users</Link>
                                     <Link to="/manage-requests" className="navbar-link">Requests</Link>
+                                    <Link to="/manage-mangas" className="navbar-link">Mangas</Link>
                                 </>
                             )}
 
-                            {(isAdmin || isModerator) && (
-                                <Link to="/manage-mangas" className="navbar-link">Manage Mangas</Link>
-                            )}
-
-                            {isContentManager && (
+                            {/* Content Manager Links */}
+                            {['admin', 'moderator', 'contentManager'].includes(user?.role) && (
                                 <Link to="/content-management" className="navbar-link">Content</Link>
                             )}
 
-                            {isEditor && (
-                                <Link to="/edit-chapters" className="navbar-link">Edit Chapters</Link>
+                            {/* Editor Links */}
+                            {['admin', 'editor'].includes(user?.role) && (
+                                <Link to="/edit-chapters" className="navbar-link">Chapters</Link>
+                            )}
+
+                            {/* Admin Links */}
+                            {user?.role === 'admin' && (
+                                <Link to="/manage-users" className="navbar-link">Users</Link>
                             )}
 
                             <Link to="/profile" className="navbar-link">Profile</Link>
-                            <button onClick={handleLogout} className="logout-btn">Logout</button>
                         </>
                     ) : (
                         <>
