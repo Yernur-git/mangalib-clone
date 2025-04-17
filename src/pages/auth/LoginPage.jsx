@@ -4,7 +4,7 @@ import { loginSuccess } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs";
 
-export default LoginPage;
+
 
 const LoginPage = () => {
     const [email, setEmail] = useState("");
@@ -44,3 +44,5 @@ const LoginPage = () => {
         </div>
     );
 };
+
+export default LoginPage;

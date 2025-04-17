@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import '../../styles/admin.css';
 
 const ManageUsersPage = () => {
     const [users, setUsers] = useState([]);
@@ -22,45 +23,63 @@ const ManageUsersPage = () => {
             });
     };
 
+    const handleDeleteUser = (userId) => {
+        if (window.confirm('Are you sure you want to delete this user?')) {
+            fetch(`http://localhost:3001/users/${userId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+
+                .then(() => {
+                    setUsers(users.filter(u => u.id !== userId));
+                });
+        }
+    };
+
     return (
-        <div className="container">
-            <h2>Manage Users</h2>
-            <table>
-                <thead>
-                <tr>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {users.map(u => (
-                    <tr key={u.id}>
-                        <td>{u.username}</td>
-                        <td>{u.email}</td>
-                        <td>
-                            {user?.id !== u.id ? (
-                                <select value={u.role} onChange={(e) => updateUserRole(u.id, e.target.value)}>
-                                    <option value="reader">Reader</option>
-                                    <option value="editor">Editor</option>
-                                    <option value="contentManager">Content Manager</option>
-                                    <option value="moderator">Moderator</option>
-                                    <option value="admin">Admin</option>
-                                </select>
-                            ) : (
-                                u.role
-                            )}
-                        </td>
-                        <td>
-                            {user?.id !== u.id && (
-                                <button>Delete</button>
-                            )}
-                        </td>
+        <div className="admin-container dark-theme">
+            <h2 className="admin-title">Manage Users</h2>
+            <div className="table-responsive">
+                <table className="admin-table">
+                    {/* Заголовки */}
+                    <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
                     </tr>
-                ))}
-                </tbody>
-            </table>
+                    </thead>
+
+                    {/* Тело таблицы */}
+                    <tbody>
+                    {users.map(u => (
+                        <tr key={u.id}>
+                            <td data-label="Username">{u.username || 'N/A'}</td>
+                            <td data-label="Email">{u.email}</td>
+                            <td data-label="Role">
+                                {user?.id !== u.id ? (
+                                    <select className="role-select dark-select">
+                                        {/* options */}
+                                    </select>
+                                ) : (
+                                    <span className="current-role">{u.role}</span>
+                                )}
+                            </td>
+                            <td data-label="Actions">
+                                {user?.id !== u.id && (
+                                    <button className="delete-btn dark-btn">
+                                        Delete
+                                    </button>
+                                )}
+                            </td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };
