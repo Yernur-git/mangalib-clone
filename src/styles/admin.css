@@ -1,0 +1,90 @@
+/* admin.css */
+.manage-mangas-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #1a1a1a;
+}
+
+.manage-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    border-bottom: 2px solid #ff6600;
+}
+
+.manga-admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.admin-manga-card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    background: #2a2a2a;
+    border: 1px solid #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.admin-manga-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-manga-cover {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+}
+
+.admin-manga-content {
+    padding: 15px;
+}
+
+.admin-manga-title {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.admin-manga-author {
+    margin: 0 0 10px 0;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.admin-manga-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.edit-btn {
+    background-color: #ff6600;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e65c00;
+}
+
+.delete-btn {
+    background-color: #333;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #444;
+}

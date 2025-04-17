@@ -1,61 +1,168 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "email": "admin@example.com",
-      "password": "admin",
+      "password": "$2b$10$mJSCQGfkhhO9Iz2y7dHzM.bq7DjxtbA/tmyLjzQxjBaCLTx3rL2Sy",
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "moderator1",
       "email": "moder1@example.com",
-      "password": "moderator",
+      "password": "$2b$10$j7JOat9oelENR5BzQGyVxuknZthmePo1.rYnvekyMu/jZl45S.9Ji",
       "role": "moderator"
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "user1",
       "email": "user1@example.com",
-      "password": "user",
-      "role": "user"
-    }
-  ],
-
-  "manga": [
-    {
-      "id": 1,
-      "title": "Naruto",
-      "author": "Masashi Kishimoto",
-      "genres": ["Action", "Adventure"],
-      "coverImage": "/assets/images/naruto.jpg",
-      "uploaderId": 3
+      "password": "$2b$10$9.0XPueKPzY2PlodddQHxe7WNAQSMqygzXlfqALUyDMOIJ7odXB6G",
+      "role": "reader"
     },
     {
-      "id": 2,
-      "title": "One Piece",
-      "author": "Eiichiro Oda",
-      "genres": ["Action", "Fantasy"],
-      "coverImage": "/assets/images/onepiece.jpg",
-      "uploaderId": 3
+      "id": 4,
+      "username": "contentManager1",
+      "email": "cm@example.com",
+      "password": "$2b$10$ZmPUwTLiBGJEJkXTdshp5uRyw6is57Ei3fMo2EjfQHXS0jiNkQFDu",
+      "role": "contentManager"
+    },
+    {
+      "id": 5,
+      "username": "editor1",
+      "email": "editor@example.com",
+      "password": "$2b$10$SINmGyMqaD3QLh0KaN5B.OpA/KOFnb/SHyapT.s6Gt/7PD.YxWXqO",
+      "role": "editor"
     }
   ],
-
+  "manga": [
+    {
+      "id": "1",
+      "title": "Naruto",
+      "author": "Masashi Kishimoto",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "coverImage": "/assets/images/naruto.jpg",
+      "uploaderId": 1,
+      "description": "Naruto Uzumaki, a young ninja with a sealed beast inside him, dreams of becoming the strongest ninja and the Hokage of his village. On his journey, he builds bonds, faces deadly threats, and discovers the true meaning of friendship and perseverance."
+    },
+    {
+      "id": "2",
+      "title": "One Piece",
+      "author": "Eiichiro Oda",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "coverImage": "/assets/images/onepiece.jpg",
+      "uploaderId": 1,
+      "description": "Monkey D. Luffy sets out on a journey to find the legendary treasure known as 'One Piece' and become the King of the Pirates. With a crew of unique companions and a spirit that never gives up, he explores vast oceans, battles powerful foes, and uncovers the secrets of the world."
+    },
+    {
+      "id": "3",
+      "title": "Attack on Titan",
+      "author": "Hajime Isayama",
+      "genres": [
+        "Action",
+        "Dark Fantasy",
+        "Horror"
+      ],
+      "coverImage": "/assets/images/aot.jpg",
+      "uploaderId": 1,
+      "description": "In a world where humanity lives within cities surrounded by enormous walls due to the Titans, gigantic humanoid creatures who devour humans, the story follows Eren Yeager and his friends who join the military to fight the Titans after their hometown is invaded."
+    },
+    {
+      "id": "4",
+      "title": "Tokyo Ghoul",
+      "author": "Sui Ishida",
+      "genres": [
+        "Dark Fantasy",
+        "Horror",
+        "Psychological"
+      ],
+      "coverImage": "/assets/images/tokyo_ghoul.jpg",
+      "uploaderId": 1,
+      "description": "The story follows Ken Kaneki, a college student who barely survives a deadly encounter with Rize Kamishiro, a ghoul. He undergoes surgery that transforms him into a half-ghoul and must adapt to his new life while navigating the conflicts between ghouls and humans."
+    },
+    {
+      "id": "5",
+      "title": "Kaoru Hana wa Rin to Saku",
+      "author": "Saka Mikami",
+      "genres": [
+        "Romance",
+        "Slice of Life",
+        "School"
+      ],
+      "coverImage": "/assets/images/kaoru_hana.jpg",
+      "uploaderId": 1,
+      "description": "A heartwarming romance story about two students from rival schools who unexpectedly develop feelings for each other, challenging the prejudices between their institutions."
+    },
+    {
+      "id": "6",
+      "title": "Kaguya-sama: Love is War",
+      "author": "Aka Akasaka",
+      "genres": [
+        "Romantic Comedy",
+        "Psychological",
+        "School"
+      ],
+      "coverImage": "/assets/images/kaguya.jpg",
+      "uploaderId": 1,
+      "description": "The story follows the romantic tension between student council president Miyuki Shirogane and vice president Kaguya Shinomiya, two geniuses who are too proud to confess their love and instead devise elaborate schemes to make the other confess first."
+    }
+  ],
   "requests": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 3,
       "mangaTitle": "Bleach",
       "status": "pending",
       "createdAt": "2025-04-05T12:00:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 3,
       "mangaTitle": "Attack on Titan",
       "status": "approved",
       "createdAt": "2025-04-04T15:30:00Z"
     }
-  ]
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "mangaId": "1",
+      "userId": "1",
+      "username": "admin",
+      "text": "Great manga!",
+      "date": "2023-05-15T10:30:00Z"
+    }
+  ],
+  "favorites": [
+    {
+      "id": "45d8",
+      "mangaId": "1",
+      "userId": "3",
+      "mangaTitle": "Naruto",
+      "mangaCover": "/assets/images/naruto.jpg",
+      "createdAt": "2025-04-17T14:06:33.172Z"
+    },
+    {
+      "id": "b773",
+      "mangaId": "1",
+      "userId": "1",
+      "mangaTitle": "Naruto",
+      "mangaCover": "/assets/images/naruto.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ]
+    }
+  ],
+  "chapters": []
 }

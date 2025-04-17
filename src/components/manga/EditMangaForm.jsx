@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateManga } from '../features/manga/mangaSlice';
-import '../styles/forms.css';
+import { updateManga } from '../../features/manga/mangaSlice';
+import '../../styles/forms.css';
 
 const EditMangaForm = ({ onClose, onEdit }) => {
     const dispatch = useDispatch();

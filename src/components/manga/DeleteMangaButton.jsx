@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { deleteManga } from '../features/manga/mangaSlice';
-import '../styles/forms.css';
+import { deleteManga } from '../../features/manga/mangaSlice';
+import '../../styles/forms.css';
 
 const DeleteMangaButton = ({ id, onDelete, className }) => {
     const dispatch = useDispatch();

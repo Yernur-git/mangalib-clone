@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import '../styles/manga-detail.css';
+import '../../styles/manga-detail.css';
 
 const MangaListPage = () => {
     const [manga, setManga] = useState([]);

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import AddMangaForm from '../components/manga/AddMangaForm';
-import MangaListAdmin from '../components/MangaListAdmin';
-import '../styles/admin.css';
+import AddMangaForm from '../../components/manga/AddMangaForm';
+import MangaListAdmin from '../../components/MangaListAdmin';
+import '../../styles/admin.css';
 
 const ManageMangasPage = () => {
     const dispatch = useDispatch();
