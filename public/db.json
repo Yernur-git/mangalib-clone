@@ -4,21 +4,21 @@
       "id": 1,
       "username": "admin",
       "email": "admin@example.com",
-      "passwordHash": "$2a$10$abcd...",
+      "password": "admin",
       "role": "admin"
     },
     {
       "id": 2,
       "username": "moderator1",
       "email": "moder1@example.com",
-      "passwordHash": "$2a$10$efgh...",
+      "password": "moderator",
       "role": "moderator"
     },
     {
       "id": 3,
       "username": "user1",
       "email": "user1@example.com",
-      "passwordHash": "$2a$10$ijkl...",
+      "password": "user",
       "role": "user"
     }
   ],
@@ -29,7 +29,7 @@
       "title": "Naruto",
       "author": "Masashi Kishimoto",
       "genres": ["Action", "Adventure"],
-      "coverImage": "/images/naruto.jpg",
+      "coverImage": "/assets/images/naruto.jpg",
       "uploaderId": 3
     },
     {
@@ -37,7 +37,7 @@
       "title": "One Piece",
       "author": "Eiichiro Oda",
       "genres": ["Action", "Fantasy"],
-      "coverImage": "/images/onepiece.jpg",
+      "coverImage": "/assets/images/onepiece.jpg",
       "uploaderId": 3
     }
   ],
